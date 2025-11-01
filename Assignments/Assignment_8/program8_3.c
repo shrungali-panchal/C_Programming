@@ -1,0 +1,57 @@
+//////////////////////////////////////////////////////////////////////////
+//
+//Required Header Files
+//
+//////////////////////////////////////////////////////////////////////////
+#include<stdio.h>
+//////////////////////////////////////////////////////////////////////////
+//
+//Function name:Factorial
+//Description: It is used Display Factorial of given input 
+//Input: Integer
+//Output: Integer
+//Author:Shrungali Shrikant Panchal
+//Date: 31/10/2025
+//
+//////////////////////////////////////////////////////////////////////////
+int Factorial(int iNo)
+{
+     if(iNo<0)
+        {
+            iNo= -iNo;
+           
+        }
+    int iFact=1;
+    int iCnt =0;
+    for(iCnt=1;iCnt<=iNo;iCnt++)
+    {
+        iFact= iFact*=iCnt;
+    }  
+    return iFact;
+}// End of Factorial
+//////////////////////////////////////////////////////////////////////////
+//
+//Entry point function of application
+//
+//////////////////////////////////////////////////////////////////////////
+int main()
+{
+    int iValue=0;
+    int iRet=0;
+    printf("Enter Number:");
+    scanf("%d",&iValue);
+    iRet=Factorial(iValue);
+    printf("Factorial of number is %d\n",iRet);
+    return 0;
+}//End of main
+//////////////////////////////////////////////////////////////////////////
+//////////////////
+//Testcaase successfully handaled by the application
+//
+//Input: 5                                                  
+//Output :Factorial of number is 120
+//Input: -5                                                  
+//Output :Factorial of number is 120
+//         
+//////////////////////////////////////////////////////////////////////////
+//////////////////
