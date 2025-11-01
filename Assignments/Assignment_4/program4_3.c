@@ -1,0 +1,58 @@
+//////////////////////////////////////////////////////////////////////////
+//
+//Required Header Files
+//
+//////////////////////////////////////////////////////////////////////////
+#include<stdio.h>
+//////////////////////////////////////////////////////////////////////////
+//
+//Functio name:NonFact
+//Descripition: It is used to Display non factors of given input 
+//Input: Integer
+//Output: Integer
+//Author:Shrungali Shrikant Panchal
+//Date: 30/10/2025
+//
+//////////////////////////////////////////////////////////////////////////
+void NonFact(int iNo)
+{
+    if(iNo<=0)
+    {
+        iNo= -iNo;
+    }
+
+    int iCnt=0;
+    
+    for(iCnt=1; iCnt<=iNo; iCnt++)
+    {
+        if((iNo%iCnt) != 0)
+        {
+            printf("%d\t",iCnt);
+            
+        }
+    }
+}// End of NonFact
+//////////////////////////////////////////////////////////////////////////
+//
+//Entry point function of application
+//
+//////////////////////////////////////////////////////////////////////////
+int main()
+{
+    int iValue=0;
+    printf("Enter Number:");
+    scanf("%d",&iValue);
+    NonFact(iValue);
+    return 0;
+} //End of main
+//////////////////////////////////////////////////////////////////////////
+//////////////////
+//Testcaase successfully handaled by the application
+//
+//Input : 12                                                   
+//Output :5       7       8       9       10      11                     
+//Input : 10                                         
+//Output :3       4       6       7       8       9
+//         
+//////////////////////////////////////////////////////////////////////////
+//////////////////
